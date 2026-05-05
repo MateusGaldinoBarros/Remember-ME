@@ -12,6 +12,13 @@ public class Evento {
     @Column(nullable = false, unique = true)
     private int prazo;
 
+    public Evento(String descricao, int prazo) {
+        this.descricao = descricao;
+        this.prazo = prazo;
+    }
+
+
+
     public void setId(long id) {
         Id = id;
     }
@@ -21,7 +28,7 @@ public class Evento {
     }
 
     public void setPrazo(int prazo) {
-        if(prazo>=0){
+        if(prazo<=0){
             throw new IllegalArgumentException();
         }
         this.prazo = prazo;
