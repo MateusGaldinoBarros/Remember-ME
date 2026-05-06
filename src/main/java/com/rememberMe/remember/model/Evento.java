@@ -9,14 +9,21 @@ public class Evento {
     private long Id;
     @Column(nullable = false, unique = true)
     private String descricao;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private int prazo;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private EventoStatus eventoStatus;
+
 
     public Evento(String descricao, int prazo) {
         this.descricao = descricao;
         this.prazo = prazo;
     }
 
+    public Evento() {
+
+    }
 
 
     public void setId(long id) {
