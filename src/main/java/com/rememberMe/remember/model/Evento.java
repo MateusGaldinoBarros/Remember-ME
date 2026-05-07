@@ -40,4 +40,24 @@ public class Evento {
         }
         this.prazo = prazo;
     }
+
+    public void setEventoStatus(EventoStatus eventoStatus) {
+        this.eventoStatus = eventoStatus;
+    }
+
+    public long getId() {
+        return Id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public int getPrazo() {
+        return prazo;
+    }
+
+    public EventoStatus getEventoStatus() {
+        return eventoStatus;
+    }
 }

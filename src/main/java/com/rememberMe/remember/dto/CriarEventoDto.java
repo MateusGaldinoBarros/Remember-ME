@@ -2,10 +2,17 @@ package com.rememberMe.remember.dto;
 
 import com.rememberMe.remember.model.EventoStatus;
 
-public class EventoDto {
+public class CriarEventoDto {
     private String descricao;
     private int prazo;
     private EventoStatus eventoStatus;
+
+
+    public CriarEventoDto(String descricao, int prazo, EventoStatus eventoStatus) {
+        this.descricao = descricao;
+        this.prazo = prazo;
+        this.eventoStatus = eventoStatus;
+    }
 
     public String getDescricao() {
         return descricao;
