@@ -40,6 +40,9 @@ public class CriarEventoTeste {
         Evento resultado = eventoService.criarEvento(eventoDto);
 
         assertNotNull(resultado);
+        assertEquals(eventoDto.getDescricao(), resultado.getDescricao());
+        assertEquals(eventoDto.getPrazo(), resultado.getPrazo());
+        assertEquals(eventoDto.getEventoStatus(), resultado.getEventoStatus());
         verify(eventoRepository, times(1)).save(any(Evento.class));
     }
 }
